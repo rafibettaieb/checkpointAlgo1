@@ -1,0 +1,55 @@
+ALGORITHM Checkpoint_Algorithms_and_its_elements
+
+VAR 
+    s : STRING;
+    i : INTEGER;
+    j : INTEGER;
+    check : BOOLEAN := true;
+    countLen : INTEGER := 0;
+    countWord : INTEGER := 0;
+    voy : STRING := "oiyeauOIYEAU";
+    countVoy : INTEGER := 0;
+
+BEGIN
+    WRITE("Enter a string: ");
+    READ(s);
+
+
+    //The length of the sentence (the number of characters).
+
+    //1st Solution
+    WRITE("Length of the string: ", s.length);
+
+    //2nd Solution
+    WHILE (check) DO
+        countLen := countLen + 1
+        IF (s[countLen] == '.') THEN
+            check := false
+        END_IF
+    END_WHILE
+
+    WRITE("Length of the string: ", countLen+1);
+
+    //The number of words in the sentence (assuming that the words are separated by a single space).
+    
+    FOR i FROM 0 TO s.length-1 STEP 1 DO
+        IF (s[i] = ' ') THEN
+            countWord := countWord + 1;
+        END_IF;
+    END_FOR;
+
+    WRITE("Number of words: ", countWord + 1);
+
+    //The number of vowels in the sentence.
+
+    FOR i FROM 0 TO s.length-1 STEP 1 DO
+        FOR J FROM 0 TO voy.length-1 STEP 1 DO
+            IF (s[i] == voy[j]) THEN
+                countVoy := countVoy + 1;
+            END_IF;
+        END_FOR;
+    END_FOR;
+
+    WRITE("Number of vowels: ", countVoy);
+    
+END
