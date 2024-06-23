@@ -1,1 +1,1 @@
-this is the first checkpoint of the algorithm coutse : Introduction to Algorithms and Basic Concepts
+this is the first checkpoint of the algorithm coutse : Checkpoint Algorithms and its elements
